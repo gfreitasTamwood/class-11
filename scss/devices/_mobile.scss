@@ -1,5 +1,66 @@
 @media (min-width: 300px) {
 
+    .fa-bars {
+        color: white;
+        border: 1px solid white;
+        padding: 2%;
+        height: fit-content;
+        text-decoration: none;
+    }
+
+    .header {
+        @include bgPic("/img/montains.jpg",center,cover);
+        height: 80vh;
+        padding: 5%;
+        @include flexBox(column,space-around,center); 
+        h2, h3 {
+            color: white;
+            border-width: 0px;
+        }
+        .nav-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        p {
+            font-size: $fontSizeHeader;
+        }
+        
+        .header-div {
+            color: white;
+            padding: 5%;
+            @include flexBox(column,center,center,nowrap,30px);
+            width: 60%;
+            background-color: $bgOverlay-2;
+            // position: absolute;
+            // left: 60px;
+            // bottom: 200px;
+        }
+    }
+
+    .service {
+        @include flexBox(column,center,center,wrap,30px);
+        padding: 2%;
+        aside {
+            border-radius: 50%;
+            border: 1px solid $bgColorLightBlue;
+            width: 15vh;
+            height: 15vh;
+            @include flexBox(column,center,center);
+            color: $bgColorLightBlue;
+        }
+
+        [class*="service-box-"] {
+            box-sizing: border-box;
+            padding: 3%;
+            @include flexBox(column,center,center,nowrap,30px);
+            width: 80%;
+            border: 40px solid $bgColorLightGray;
+            text-align: center;
+        }
+        
+    }
+
     .grid-gallery {
         @include flexBox(column,center,center,wrap);
         padding: 2%;
